@@ -1,0 +1,21 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+
+<!-- Very simple element that converts the text value to its inner html. -->
+<dom-module id="text-to-html">
+  <script>
+    Polymer({
+      is: 'text-to-html',
+      properties: {
+        value: {
+          type: String,
+          observer: '_onValueChanged'
+        }
+      },
+
+      _onValueChanged: function() {
+        this.innerHTML = this.value;
+      }
+    });
+  </script>
+</dom-module>
